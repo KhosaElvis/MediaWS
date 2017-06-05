@@ -1,0 +1,22 @@
+﻿
+<div>
+    @if (Session["Lg_id"] != null)
+    {
+        <img src="" height="100px" width="100px" />
+        <br />
+        <br />
+        <b> @Convert.ToString(Session["Lg_name"]) &nbsp;@Convert.ToString(Session["Lg_lname"])</b>
+        <div> Views  </div>
+        <div> Connections </div>
+        @Html.ActionLink("Logout", "Logout", "Users")
+    }
+    else
+    {
+        <div>
+            <form>
+                 @Html.ActionLink("Login", "Login", "Users")
+            </form>
+            
+        </div>
+    }
+</div>  
